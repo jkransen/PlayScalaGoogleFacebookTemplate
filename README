@@ -1,0 +1,28 @@
+Workout application
+=====================================
+
+This is an empty app template with Play Framework and Scala that makes 
+users log in through their Facebook or Google accounts. The app further 
+has dependencies on Anorm for non-ORM SQL database access, PostgreSQL 
+database (as used by Heroku, and installed by default on e.g. Ubuntu) 
+and RestFB for Facebook graph data traversal. From this state it can be 
+forked to create any blank Play Framework / Scala app that uses Google 
+and/or Facebook for authentication.
+
+End users are required to allow their email addresses to be passed from 
+Facebook to the app (for Google this is a standard permission). The 
+email address is used throughout the app to identify the users. This is 
+done by the User domain class already provided that is stored in the SQL 
+database. It is up to you to add the other domain classes can be linked 
+to it.
+
+The next steps you need to do to get the app running:
+ * Get an API key from Facebook, see https://developers.facebook.com/apps
+ * Get an API key from Google, see https://code.google.com/apis/console
+ * Install or get access to a PostgreSQL RDBMS and create a database,
+   see http://www.postgresql.org/
+ * Replace the placeholders throughout the code (IN_CAPITALS) with the settings
+   for the above
+ * Run "play secret" to create a new application secret in application.conf
+ 
+Good luck!

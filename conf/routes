@@ -1,0 +1,17 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+GET     /login                      controllers.Application.login
+GET     /logout                     controllers.Application.logout
+
+GET     /google/login               controllers.Google.loginGoogle
+GET     /google/oauth2callback      controllers.Google.oauth2callback(state: String, code: String)
+
+GET     /facebook/login             controllers.Facebook.login
+GET     /facebook/login2            controllers.Facebook.login2(code: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
