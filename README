@@ -1,5 +1,5 @@
-Workout application
-=====================================
+Template Play Framwork / Scala application with Google/Facebook login
+=====================================================================
 
 This is an empty app template with Play Framework and Scala that makes 
 users log in through their Facebook or Google accounts. The app further 

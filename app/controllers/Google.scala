@@ -25,7 +25,6 @@ object Google extends Controller {
   }
 
   def oauth2callback(state: String, code: String) = Action {
-    println("logged in, state: " + state + ", code: " + code)
     val postBody = "code=" + code + "&client_id=" + clientId + "&client_secret=" + clientSecret + "&redirect_uri=" + redirectUrl + "&grant_type=authorization_code"
     val body = WS.url("https://accounts.google.com/o/oauth2/token").withHeaders("Content-Type" -> "application/x-www-form-urlencoded").post(postBody)
     val accessJson = body.await.get.json
