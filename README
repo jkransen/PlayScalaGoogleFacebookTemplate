@@ -21,8 +21,13 @@ The next steps you need to do to get the app running:
  * Get an API key from Google, see https://code.google.com/apis/console
  * Install or get access to a PostgreSQL RDBMS and create a database,
    see http://www.postgresql.org/
- * Replace the placeholders throughout the code (IN_CAPITALS) with the settings
-   for the above
- * Run "play secret" to create a new application secret in application.conf
- 
+ * Replace the placeholders throughout the code (IN_CAPITALS) with the 
+   settings for the above
+ * edit project/Build.scala and set your project name
+ * Run 'play' from the project root
+ * Run [project] $ secret to create a new application secret in 
+   application.conf
+ * Run [project] $ eclipsify to turn it into an Eclipse project, and 
+   import this project into your Eclipse workspace
+ * Run [project] $ run 
 Good luck!
